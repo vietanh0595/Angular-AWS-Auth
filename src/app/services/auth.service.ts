@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { jwtDecode, JwtPayload } from 'jwt-decode';
 import { OidcSecurityService } from 'angular-auth-oidc-client';
 import { firstValueFrom } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 interface idTokenClaims extends JwtPayload {
   'cognito:groups'?: string[];
@@ -50,7 +51,7 @@ export class AuthService {
     this.userData = null;
 
     window.location.href =
-      'https://ap-southeast-2b99mq6bmq.auth.ap-southeast-2.amazoncognito.com/logout?client_id=73nh4q53hgvg5i2f9er7m86la5&logout_uri=http://localhost:4200/';
+      `https://ap-southeast-2b99mq6bmq.auth.ap-southeast-2.amazoncognito.com/logout?client_id=73nh4q53hgvg5i2f9er7m86la5&logout_uri=${environment.returnUrl}`;
   }
 
   getUser() {
