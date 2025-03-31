@@ -1,5 +1,5 @@
 <ng-container *ngIf="user; else loading"> 
-  <h1>Welcome {{ user?.username }}</h1>
+  <h1>Welcome {{ user.username }}</h1>
   <button (click)="logout()">logout</button>
   <router-outlet />
 </ng-container>
