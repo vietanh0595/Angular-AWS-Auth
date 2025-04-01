@@ -1,3 +1,3 @@
 export const environment = {
-  returnUrl: 'https://awscodepipeline-angular-cognito-bucket.s3.ap-southeast-2.amazonaws.com/angular-build/index.html',
+  returnUrl: 'https://di9s3qr0eujqq.cloudfront.net',
 };
