@@ -5,10 +5,12 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
+      - npm install -g @angular/cli
       - npm install
 
   build:
     commands:
+      - ng test --watch=false --browsers=ChromeHeadless
       - npm run build
 
 artifacts:
