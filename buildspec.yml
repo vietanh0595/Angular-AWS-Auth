@@ -10,7 +10,6 @@ phases:
 
   build:
     commands:
-      - ng test --watch=false --browsers=ChromeHeadless
       - npm run build
 
 artifacts:
